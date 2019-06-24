@@ -1,0 +1,20 @@
+{
+    "id" : "redprint/2019_06_22_064324_IrxXmfJbtswi",
+    "model" : "Pregunta",
+    "files" : [
+        { "path" : "routes/web.php", "conflict" : "false" },
+		{ "path" : "routes/api.php", "conflict" : "false" },
+		{ "path" : "config/backend_menu.php", "conflict" : "false" },
+		{ "path" : "app//Pregunta.php", "conflict" : "true" },
+		{ "path" : "database/migrations/2019_06_22_064324_create_preguntas_table.php", "conflict" : "true" },
+		{ "path" : "app/Http/Requests/Backend//PreguntaRequest.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend//PreguntasController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Frontend//PreguntasController.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/preguntas/index.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/preguntas/form.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/frontend/preguntas/index.blade.php", "conflict" : "true" }
+		
+    ],
+    "migration" : "2019_06_22_064324_create_preguntas_table",
+    "successful" : false
+}

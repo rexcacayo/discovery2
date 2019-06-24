@@ -1,0 +1,7 @@
+    // Cuestionario Route
+    Route::get('cuestionarios', 'CuestionariosController@index')->name('api.cuestionario.index');
+    Route::get('/cuestionarios/{cuestionario}', 'CuestionariosController@form')->name('api.cuestionario.form');
+    Route::post('/cuestionarios/save', 'CuestionariosController@post')->name('api.cuestionario.save');
+    Route::post('/cuestionarios/{cuestionario}/delete', 'CuestionariosController@delete')->name('api.cuestionario.delete');
+    Route::post('/cuestionarios/{cuestionario}/restore', 'CuestionariosController@restore')->name('api.cuestionario.restore');
+    Route::post('/cuestionarios/{cuestionario}/force-delete', 'CuestionariosController@forceDelete')->name('api.cuestionario.force-delete');

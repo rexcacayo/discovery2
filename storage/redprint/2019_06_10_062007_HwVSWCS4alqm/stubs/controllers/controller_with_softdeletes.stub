@@ -1,0 +1,113 @@
+<?php
+
+namespace App\Http\Controllers\Backend{{GENERAL_NAMESPACE}};
+
+use {{USE_NAMESPACE}}{{MODEL_CLASS}};
+use Illuminate\Http\Request;
+use Shahnewaz\Redprint\Traits\CanUpload;
+use App\Http\Requests\Backend{{GENERAL_NAMESPACE}}\{{REQUEST_CLASS}};
+use App\Http\Controllers\Controller;
+
+class {{CONTROLLER_CLASS}} extends Controller
+{
+    use CanUpload;
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
+    {
+        ${{MODEL_ENTITIES}} = {{MODEL_CLASS}}::withTrashed();
+        
+        ${{MODEL_ENTITIES}} = ${{MODEL_ENTITIES}}->paginate(20);
+        return view('backend.{{MODEL_ENTITIES}}.index')->with('{{MODEL_ENTITIES}}Data', ${{MODEL_ENTITIES}});
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function form({{MODEL_CLASS}} ${{MODEL_ENTITY}} = null)
+    {
+        ${{MODEL_ENTITY}} = ${{MODEL_ENTITY}} ?: new {{MODEL_CLASS}};
+        return view('backend.{{MODEL_ENTITIES}}.form')->with('{{MODEL_ENTITY}}', ${{MODEL_ENTITY}});
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function post({{REQUEST_CLASS}} $request, {{MODEL_CLASS}} ${{MODEL_ENTITY}})
+    {
+        ${{MODEL_ENTITY}} = {{MODEL_CLASS}}::firstOrNew(['id' => $request->get('id')]);
+        ${{MODEL_ENTITY}}->id = $request->get('id');
+		${{MODEL_ENTITY}}->fecha = $request->get('fecha');
+		${{MODEL_ENTITY}}->nombreSr = $request->get('nombreSr');
+		${{MODEL_ENTITY}}->cedulaSr = $request->get('cedulaSr');
+		${{MODEL_ENTITY}}->edadSr = $request->get('edadSr');
+		${{MODEL_ENTITY}}->ocupacionSr = $request->get('ocupacionSr');
+		${{MODEL_ENTITY}}->nombreSra = $request->get('nombreSra');
+		${{MODEL_ENTITY}}->cedulaSra = $request->get('cedulaSra');
+		${{MODEL_ENTITY}}->edadSra = $request->get('edadSra');
+		${{MODEL_ENTITY}}->ocupacionSra = $request->get('ocupacionSra');
+		${{MODEL_ENTITY}}->estadoCivil = $request->get('estadoCivil');
+		${{MODEL_ENTITY}}->ingreso = $request->get('ingreso');
+		${{MODEL_ENTITY}}->telCasa = $request->get('telCasa');
+		${{MODEL_ENTITY}}->direccion = $request->get('direccion');
+		${{MODEL_ENTITY}}->correo = $request->get('correo');
+		${{MODEL_ENTITY}}->lugaresContactaron = $request->get('lugaresContactaron');
+		${{MODEL_ENTITY}}->propiedad = $request->get('propiedad');
+		${{MODEL_ENTITY}}->opc = $request->get('opc');
+		${{MODEL_ENTITY}}->liner = $request->get('liner');
+		${{MODEL_ENTITY}}->hostess = $request->get('hostess');
+		if ($request->file('cvs')) {
+			${{MODEL_ENTITY}}->cvs = $this->upload($request->file('cvs'), 'clientes')->getFileName();
+		} else {
+			${{MODEL_ENTITY}}->cvs = ${{MODEL_ENTITY}}->cvs;
+		}
+
+        ${{MODEL_ENTITY}}->save();
+
+        $message = trans('redprint::core.model_added', ['name' => '{{MODEL_ENTITY}}']);
+        return redirect()->route('{{MODEL_ENTITY}}.index')->withMessage($message);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function delete({{MODEL_CLASS}} ${{MODEL_ENTITY}})
+    {
+        ${{MODEL_ENTITY}}->delete();
+        $message = trans('redprint::core.model_deleted', ['name' => '{{MODEL_ENTITY}}']);
+        return redirect()->back()->withMessage($message);
+    }
+
+    /**
+     * Restore the specified deleted resource to storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore(${{MODEL_ENTITY}}Id)
+    {
+        ${{MODEL_ENTITY}} = {{MODEL_CLASS}}::withTrashed()->find(${{MODEL_ENTITY}}Id);
+        ${{MODEL_ENTITY}}->restore();
+        $message = trans('redprint::core.model_restored', ['name' => '{{MODEL_ENTITY}}']);
+        return redirect()->back()->withMessage($message);
+    }
+
+    public function forceDelete(${{MODEL_ENTITY}}Id)
+    {
+        ${{MODEL_ENTITY}} = {{MODEL_CLASS}}::withTrashed()->find(${{MODEL_ENTITY}}Id);
+        ${{MODEL_ENTITY}}->forceDelete();
+        $message = trans('redprint::core.model_permanently_deleted', ['name' => '{{MODEL_ENTITY}}']);
+        return redirect()->back()->withMessage($message);
+    }
+}

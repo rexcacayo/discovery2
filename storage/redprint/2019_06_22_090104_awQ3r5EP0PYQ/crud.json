@@ -1,0 +1,23 @@
+{
+    "id" : "redprint/2019_06_22_090104_awQ3r5EP0PYQ",
+    "model" : "Cuestionario",
+    "files" : [
+        { "path" : "routes/web.php", "conflict" : "false" },
+		{ "path" : "routes/api.php", "conflict" : "false" },
+		{ "path" : "config/backend_menu.php", "conflict" : "false" },
+		{ "path" : "app//Cuestionario.php", "conflict" : "true" },
+		{ "path" : "database/migrations/2019_06_22_090104_create_cuestionarios_table.php", "conflict" : "true" },
+		{ "path" : "app/Http/Requests/Backend//CuestionarioRequest.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend//CuestionariosController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Frontend//CuestionariosController.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/cuestionarios/index.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/cuestionarios/form.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/frontend/cuestionarios/index.blade.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend/API//CuestionariosController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Resources//Cuestionario.php", "conflict" : "true" },
+		{ "path" : "app/Http/Resources//CuestionarioCollection.php", "conflict" : "true" }
+		
+    ],
+    "migration" : "2019_06_22_090104_create_cuestionarios_table",
+    "successful" : false
+}

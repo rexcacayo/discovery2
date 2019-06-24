@@ -1,0 +1,8 @@
+    // Valor Route
+    Route::get('valors', 'ValorsController@index')->name('valor.index');
+    Route::get('/valors/new', 'ValorsController@form')->name('valor.new');
+    Route::get('/valors/{valor}', 'ValorsController@form')->name('valor.form');
+    Route::post('/valors/save', 'ValorsController@post')->name('valor.save');
+    Route::post('/valors/{valor}/delete', 'ValorsController@delete')->name('valor.delete');
+    Route::post('/valors/{valor}/restore', 'ValorsController@restore')->name('valor.restore');
+    Route::post('/valors/{valor}/force-delete', 'ValorsController@forceDelete')->name('valor.force-delete');

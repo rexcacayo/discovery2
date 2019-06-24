@@ -1,0 +1,8 @@
+    // Tarjeta Route
+    Route::get('tarjetas', 'TarjetasController@index')->name('tarjeta.index');
+    Route::get('/tarjetas/new', 'TarjetasController@form')->name('tarjeta.new');
+    Route::get('/tarjetas/{tarjeta}', 'TarjetasController@form')->name('tarjeta.form');
+    Route::post('/tarjetas/save', 'TarjetasController@post')->name('tarjeta.save');
+    Route::post('/tarjetas/{tarjeta}/delete', 'TarjetasController@delete')->name('tarjeta.delete');
+    Route::post('/tarjetas/{tarjeta}/restore', 'TarjetasController@restore')->name('tarjeta.restore');
+    Route::post('/tarjetas/{tarjeta}/force-delete', 'TarjetasController@forceDelete')->name('tarjeta.force-delete');

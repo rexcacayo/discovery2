@@ -1,0 +1,8 @@
+    // Pregunta Route
+    Route::get('preguntas', 'PreguntasController@index')->name('pregunta.index');
+    Route::get('/preguntas/new', 'PreguntasController@form')->name('pregunta.new');
+    Route::get('/preguntas/{pregunta}', 'PreguntasController@form')->name('pregunta.form');
+    Route::post('/preguntas/save', 'PreguntasController@post')->name('pregunta.save');
+    Route::post('/preguntas/{pregunta}/delete', 'PreguntasController@delete')->name('pregunta.delete');
+    Route::post('/preguntas/{pregunta}/restore', 'PreguntasController@restore')->name('pregunta.restore');
+    Route::post('/preguntas/{pregunta}/force-delete', 'PreguntasController@forceDelete')->name('pregunta.force-delete');

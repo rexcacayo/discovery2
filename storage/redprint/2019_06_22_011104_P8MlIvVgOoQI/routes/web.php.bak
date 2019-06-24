@@ -1,0 +1,6 @@
+    // Acompanante Route
+    Route::get('acompanantes', 'AcompanantesController@index')->name('acompanante.index');
+    Route::get('/acompanantes/new', 'AcompanantesController@form')->name('acompanante.new');
+    Route::get('/acompanantes/{acompanante}', 'AcompanantesController@form')->name('acompanante.form');
+    Route::post('/acompanantes/save', 'AcompanantesController@post')->name('acompanante.save');
+    Route::post('/acompanantes/{acompanante}/delete', 'AcompanantesController@delete')->name('acompanante.delete');

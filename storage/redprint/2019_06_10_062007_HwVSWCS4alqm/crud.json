@@ -1,0 +1,20 @@
+{
+    "id" : "redprint/2019_06_10_062007_HwVSWCS4alqm",
+    "model" : "Cliente",
+    "files" : [
+        { "path" : "routes/web.php", "conflict" : "false" },
+		{ "path" : "routes/api.php", "conflict" : "false" },
+		{ "path" : "config/backend_menu.php", "conflict" : "false" },
+		{ "path" : "app//Cliente.php", "conflict" : "true" },
+		{ "path" : "database/migrations/2019_06_10_062007_create_clientes_table.php", "conflict" : "true" },
+		{ "path" : "app/Http/Requests/Backend//ClienteRequest.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend//ClientesController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Frontend//ClientesController.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/clientes/index.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/clientes/form.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/frontend/clientes/index.blade.php", "conflict" : "true" }
+		
+    ],
+    "migration" : "2019_06_10_062007_create_clientes_table",
+    "successful" : true
+}

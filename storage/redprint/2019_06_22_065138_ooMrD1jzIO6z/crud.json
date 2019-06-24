@@ -1,0 +1,20 @@
+{
+    "id" : "redprint/2019_06_22_065138_ooMrD1jzIO6z",
+    "model" : "Parametro",
+    "files" : [
+        { "path" : "routes/web.php", "conflict" : "false" },
+		{ "path" : "routes/api.php", "conflict" : "false" },
+		{ "path" : "config/backend_menu.php", "conflict" : "false" },
+		{ "path" : "app//Parametro.php", "conflict" : "true" },
+		{ "path" : "database/migrations/2019_06_22_065138_create_parametros_table.php", "conflict" : "true" },
+		{ "path" : "app/Http/Requests/Backend//ParametroRequest.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend//ParametrosController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Frontend//ParametrosController.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/parametros/index.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/parametros/form.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/frontend/parametros/index.blade.php", "conflict" : "true" }
+		
+    ],
+    "migration" : "2019_06_22_065138_create_parametros_table",
+    "successful" : true
+}

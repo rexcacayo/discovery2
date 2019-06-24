@@ -1,0 +1,8 @@
+    // Parametro Route
+    Route::get('parametros', 'ParametrosController@index')->name('parametro.index');
+    Route::get('/parametros/new', 'ParametrosController@form')->name('parametro.new');
+    Route::get('/parametros/{parametro}', 'ParametrosController@form')->name('parametro.form');
+    Route::post('/parametros/save', 'ParametrosController@post')->name('parametro.save');
+    Route::post('/parametros/{parametro}/delete', 'ParametrosController@delete')->name('parametro.delete');
+    Route::post('/parametros/{parametro}/restore', 'ParametrosController@restore')->name('parametro.restore');
+    Route::post('/parametros/{parametro}/force-delete', 'ParametrosController@forceDelete')->name('parametro.force-delete');

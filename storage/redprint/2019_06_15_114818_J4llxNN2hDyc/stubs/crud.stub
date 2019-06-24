@@ -1,0 +1,20 @@
+{
+    "id" : "redprint/2019_06_15_114818_J4llxNN2hDyc",
+    "model" : "Tarjeta",
+    "files" : [
+        { "path" : "routes/web.php", "conflict" : "false" },
+		{ "path" : "routes/api.php", "conflict" : "false" },
+		{ "path" : "config/backend_menu.php", "conflict" : "false" },
+		{ "path" : "app//Tarjeta.php", "conflict" : "true" },
+		{ "path" : "database/migrations/2019_06_15_114818_create_tarjetas_table.php", "conflict" : "true" },
+		{ "path" : "app/Http/Requests/Backend//TarjetaRequest.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend//TarjetasController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Frontend//TarjetasController.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/tarjetas/index.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/tarjetas/form.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/frontend/tarjetas/index.blade.php", "conflict" : "true" }
+		
+    ],
+    "migration" : "2019_06_15_114818_create_tarjetas_table",
+    "successful" : true
+}

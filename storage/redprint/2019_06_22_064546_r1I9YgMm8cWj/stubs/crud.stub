@@ -1,0 +1,20 @@
+{
+    "id" : "redprint/2019_06_22_064546_r1I9YgMm8cWj",
+    "model" : "Valor",
+    "files" : [
+        { "path" : "routes/web.php", "conflict" : "false" },
+		{ "path" : "routes/api.php", "conflict" : "false" },
+		{ "path" : "config/backend_menu.php", "conflict" : "false" },
+		{ "path" : "app//Valor.php", "conflict" : "true" },
+		{ "path" : "database/migrations/2019_06_22_064546_create_valors_table.php", "conflict" : "true" },
+		{ "path" : "app/Http/Requests/Backend//ValorRequest.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend//ValorsController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Frontend//ValorsController.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/valors/index.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/valors/form.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/frontend/valors/index.blade.php", "conflict" : "true" }
+		
+    ],
+    "migration" : "2019_06_22_064546_create_valors_table",
+    "successful" : true
+}

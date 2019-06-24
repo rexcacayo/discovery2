@@ -1,0 +1,20 @@
+{
+    "id" : "redprint/2019_06_22_011104_P8MlIvVgOoQI",
+    "model" : "Acompanante",
+    "files" : [
+        { "path" : "routes/web.php", "conflict" : "false" },
+		{ "path" : "routes/api.php", "conflict" : "false" },
+		{ "path" : "config/backend_menu.php", "conflict" : "false" },
+		{ "path" : "app//Acompanante.php", "conflict" : "true" },
+		{ "path" : "database/migrations/2019_06_22_011104_create_acompanantes_table.php", "conflict" : "true" },
+		{ "path" : "app/Http/Requests/Backend//AcompananteRequest.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Backend//AcompanantesController.php", "conflict" : "true" },
+		{ "path" : "app/Http/Controllers/Frontend//AcompanantesController.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/acompanantes/index.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/backend/acompanantes/form.blade.php", "conflict" : "true" },
+		{ "path" : "resources/views/frontend/acompanantes/index.blade.php", "conflict" : "true" }
+		
+    ],
+    "migration" : "2019_06_22_011104_create_acompanantes_table",
+    "successful" : false
+}

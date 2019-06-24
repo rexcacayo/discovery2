@@ -1,0 +1,8 @@
+    // Cliente Route
+    Route::get('clientes', 'ClientesController@index')->name('cliente.index');
+    Route::get('/clientes/new', 'ClientesController@form')->name('cliente.new');
+    Route::get('/clientes/{cliente}', 'ClientesController@form')->name('cliente.form');
+    Route::post('/clientes/save', 'ClientesController@post')->name('cliente.save');
+    Route::post('/clientes/{cliente}/delete', 'ClientesController@delete')->name('cliente.delete');
+    Route::post('/clientes/{cliente}/restore', 'ClientesController@restore')->name('cliente.restore');
+    Route::post('/clientes/{cliente}/force-delete', 'ClientesController@forceDelete')->name('cliente.force-delete');
